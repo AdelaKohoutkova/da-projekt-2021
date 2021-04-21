@@ -1,0 +1,16 @@
+ALTER TABLE "hustota" RENAME COLUMN "Pocet_obyvatelk_3112" to pocet_obyvatel;
+ALTER TABLE "hustota" RENAME COLUMN "Kod_CZ_NUTS_3" to Kod_CZ_NUTS_3;
+ALTER TABLE "hustota" RENAME COLUMN "Kod_CZ_OKR" to Kod_CZ_OKR;
+ALTER TABLE "hustota" RENAME COLUMN "Celkova_vymera_ha" to Celkova_vymera_ha;
+ALTER TABLE "hustota" ADD COLUMN celkova_vymera_km2 number(38,2);
+UPDATE "hustota" SET celkova_vymera_km2 = (celkova_vymera_ha/100);
+ALTER TABLE "hustota" DROP COLUMN celkova_vymera_ha;
+CREATE TABLE "okresy_hustota" AS
+SELECT DISTINCT kod_cz_okr
+    ,SUM(pocet_obyvatel)
+        OVER (PARTITION BY kod_cz_okr) AS celkem_obyvatel
+    ,SUM(celkova_vymera_km2)
+        OVER (PARTITION BY kod_cz_okr) AS celkem_vymera
+FROM "hustota";
+ALTER TABLE "okresy_hustota" ADD COLUMN hustota_obyvatel number(38,2);
+UPDATE "okresy_hustota" SET hustota_obyvatel = celkem_obyvatel/celkem_vymera;
