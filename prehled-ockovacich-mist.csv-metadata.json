@@ -1,0 +1,101 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "url": "prehled-ockovacich-mist.csv",
+    "dc:title": "COVID-19: Očkovací místa v ČR",
+    "dc:description": "Datová sada poskytuje seznam očkovaích míst v ČR, kde jsou podávány očkovací látky proti onemocnění COVID-19.",
+    "dc:source": "Krajské hygienické stanice v ČR",
+    "dcat:keyword": [
+        "koronavirus",
+        "covid-19",
+        "očkování",
+        "očkovací místo"
+    ],
+    "dc:publisher": {
+        "schema:name": "ÚZIS ČR",
+        "schema:url": {
+            "@id": "https://www.uzis.cz/"
+        }
+    },
+    "dc:license": {
+        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+    },
+    "dc:modified": {
+        "@value": "2021-04-23",
+        "@type": "xsd:date"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ockovaci_misto_id",
+                "titles": "ockovaci_misto_id",
+                "datatype": "string",
+                "dc:description": "Jednoznačný identifikátor očkovacího místa."
+            },
+            {
+                "name": "ockovaci_misto_nazev",
+                "titles": "ockovaci_misto_nazev",
+                "datatype": "string",
+                "dc:description": "Název očkovacího místa."
+            },
+            {
+                "name": "okres_nuts_kod",
+                "titles": "okres_nuts_kod",
+                "datatype": "string",
+                "dc:description": " Identifikátor okresu podle klasifikace NUTS4, kde se očkovací místo nachází."
+            },
+            {
+                "name": "operacni_status",
+                "titles": "operacni_status",
+                "datatype": "boolean",
+                "dc:description": "Příznak, zda je očkovací místo v provozu na webu https://registrace.mzcr.cz/."
+            },
+            {
+                "name": "ockovaci_misto_adresa",
+                "titles": "ockovaci_misto_adresa",
+                "datatype": "string",
+                "dc:description": "Adresa očkovacího místa."
+            },
+            {
+                "name": "latitude",
+                "titles": "latitude",
+                "datatype": "string",
+                "dc:description": "Souřadnice (zeměpisná šířka) určující polohu očkovacího místa."
+            },
+            {
+                "name": "longitude",
+                "titles": "longitude",
+                "datatype": "string",
+                "dc:description": "Souřadnice (zeměpisná délka) určující polohu očkovacího místa."
+            },
+            {
+                "name": "ockovaci_misto_typ",
+                "titles": "ockovaci_misto_typ",
+                "datatype": "string",
+                "dc:description": "Typ očkovacího místa (OČM: očkovací místo, VOČM: velkokapacitní očkovací místo, DOČM: distribuční očkovací místo)"
+            },
+            {
+                "name": "nrpzs_kod",
+                "titles": "nrpzs_kod",
+                "datatype": "integer",
+                "dc:description": "Kód zdravotnického zařízení podle Národního registru poskytovatelů zdravotních služeb. Jedno zdravotnické zařízení může disponovat jedním nebo více očkovacími místy."
+            },
+            {
+                "name": "minimalni_kapacita",
+                "titles": "minimalni_kapacita",
+                "datatype": "integer",
+                "dc:description": "Minimalní kapacita očkovaných osob za jeden den."
+            },
+            {
+                "name": "bezbarierovy_pristup",
+                "titles": "bezbarierovy_pristup",
+                "datatype": "boolean",
+                "dc:description": "Příznak, zda očkovací místo disponuje bezbarierovým přístupem."
+            }
+        ]
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "url": "ockovani-registrace.csv",
+    "dc:title": "COVID-19: Přehled registrací podle očkovacích míst ČR",
+    "dc:description": "Datová sada poskytuje přehled vytvořených registrací v centrálním rezervačním systému na očkování proti onemocnění COVID-19 (https://registrace.mzcr.cz/). Záznamy (řádky) datové sady popisují jednotlivé anonymizované registrace, které byly vytvořeny na dané očkovací místo v daný den.",
+    "dc:source": "Krajské hygienické stanice v ČR",
+    "dcat:keyword": [
+        "koronavirus",
+        "covid-19",
+        "očkování",
+        "očkovací místo",
+        "vakcinace",
+        "registrace"
+    ],
+    "dc:publisher": {
+        "schema:name": "ÚZIS ČR",
+        "schema:url": {
+            "@id": "https://www.uzis.cz/"
+        }
+    },
+    "dc:license": {
+        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+    },
+    "dc:modified": {
+        "@value": "2021-04-23",
+        "@type": "xsd:date"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "datum",
+                "titles": "datum",
+                "datatype": "date",
+                "dc:description": "Den, kdy byla registrace v centrálním registračním systému na očkování proti onemocnění COVID-19 vytvořena."
+            },
+            {
+                "name": "ockovaci_misto_id",
+                "titles": "ockovaci_misto_id",
+                "datatype": "string",
+                "dc:description": "Jednoznačný identifikátor očkovacího místa."
+            },
+            {
+                "name": "ockovaci_misto_nazev",
+                "titles": "ockovaci_misto_nazev",
+                "datatype": "string",
+                "dc:description": "Název očkovacího místa."
+            },
+            {
+                "name": "kraj_nuts_kod",
+                "titles": "kraj_nuts_kod",
+                "datatype": "string",
+                "dc:description": "Identifikátor kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "kraj_nazev",
+                "titles": "kraj_nazev",
+                "datatype": "string",
+                "dc:description": "Název kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "vekova_skupina",
+                "titles": "vekova_skupina",
+                "datatype": "string",
+                "dc:description": "Věková skupina, do které spadá uživatel vytvářející registraci na očkování proti onemocnění COVID-19."
+            },
+            {
+                "name": "povolani",
+                "titles": "povolani",
+                "datatype": "string",
+                "dc:description": "Povolání uživatele vytvářejícího registraci na očkování proti onemocnění COVID-19 podle Národního registru zdravotnických pracovníků."
+            },
+            {
+                "name": "stat",
+                "titles": "stat",
+                "datatype": "string",
+                "dc:description": "Stát, ze kterého je uživatel vytvářející registraci na očkování proti onemocnění COVID-19."
+            },
+            {
+                "name": "rezervace",
+                "titles": "rezervace",
+                "datatype": "boolean",
+                "dc:description": "Příznak, zda uživatel již obdržel rezervaci termínu na očkování proti onemocnění COVID-19."
+            },
+            {
+                "name": "datum_rezervace",
+                "titles": "datum_rezervace",
+                "datatype": "date",
+                "dc:description": "Termín první rezervace v systému na očkování proti onemocnění COVID-19, který však není nadále aktualizován ani dále validován. Jedná se o informativní údaj, který je vztažen pouze k registracím a neobsahuje všechny rezervace. Tento atribut bude doplněn společně s novou verzi datového skladu centrálního systému."
+            }
+        ]
+    }
+}

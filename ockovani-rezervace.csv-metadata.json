@@ -1,0 +1,87 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "url": "ockovani-rezervace.csv",
+    "dc:title": "COVID-19: Přehled rezervací podle očkovacích míst ČR",
+    "dc:description": "Datová sada poskytuje přehled volné a maximální kapacity očkovacích míst v jednotlivých dnech podle informací z centrálního rezervačního systému na očkování proti onemocnění COVID-19 (https://reservatic.com/ockovani). Každý záznam (řádek) datové sady udává volnou a maximální kapacitu daného očkovacího místa v daný den.",
+    "dc:source": "Krajské hygienické stanice v ČR",
+    "dcat:keyword": [
+        "koronavirus",
+        "covid-19",
+        "očkování",
+        "očkovací místo",
+        "vakcinace",
+        "rezervace",
+        "volná kapacita",
+        "maximální kapacita"
+    ],
+    "dc:publisher": {
+        "schema:name": "ÚZIS ČR",
+        "schema:url": {
+            "@id": "https://www.uzis.cz/"
+        }
+    },
+    "dc:license": {
+        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+    },
+    "dc:modified": {
+        "@value": "2021-04-23",
+        "@type": "xsd:date"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "datum",
+                "titles": "datum",
+                "datatype": "date",
+                "dc:description": " Den, ke kterému se vztahují volné a maximální kapacity očkovacího místa podle centrálního registračnímu systému na očkování proti onemocnění COVID-19."
+            },
+            {
+                "name": "ockovaci_misto_id",
+                "titles": "ockovaci_misto_id",
+                "datatype": "string",
+                "dc:description": "Jednoznačný identifikátor očkovacího místa."
+            },
+            {
+                "name": "ockovaci_misto_nazev",
+                "titles": "ockovaci_misto_nazev",
+                "datatype": "string",
+                "dc:description": "Název očkovacího místa"
+            },
+            {
+                "name": "kraj_nuts_kod",
+                "titles": "kraj_nuts_kod",
+                "datatype": "string",
+                "dc:description": "Identifikátor kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "kraj_nazev",
+                "titles": "kraj_nazev",
+                "datatype": "string",
+                "dc:description": "Název kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "volna_kapacita",
+                "titles": "volna_kapacita",
+                "datatype": "integer",
+                "dc:description": "Volná kapacita očkovacího místa v daný den."
+            },
+            {
+                "name": "maximalni_kapacita",
+                "titles": "maximalni_kapacita",
+                "datatype": "integer",
+                "dc:description": "Maximální kapacita očkovacího místa v daný den."
+            },
+            {
+                "name": "kalendar_ockovani",
+                "titles": "kalendar_ockovani",
+                "datatype": "string",
+                "dc:description": "Identifikátor, zda se jedná o rezervaci na první dávku (hodnota V1), druhou dávku (hodnota V2) nebo jde o přednostní rezervaci (např. lékařů) (hodnota VX)."
+            }
+        ]
+    }
+}
