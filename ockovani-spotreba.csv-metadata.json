@@ -1,0 +1,104 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "url": "ockovani-spotreba.csv",
+    "dc:title": "COVID-19: Přehled spotřeby podle očkovacích míst ČR",
+    "dc:description": "Datová sada obsahuje přehled spotřeby očkovacích látek (použité a znehodnocené ampulky) proti onemocnění COVID-19 v očkovacích místech v ČR. Každý záznam (řádek) datové sady udává počet použitých a znehodnocených ampulek dané očkovací látky na daném očkovacím místě v daný den.",
+    "dc:source": "Krajské hygienické stanice v ČR",
+    "dcat:keyword": [
+        "koronavirus",
+        "covid-19",
+        "očkování",
+        "vakcinace",
+        "očkovací místo",
+        "použité ampulky",
+        "znehodnocené ampulky"
+    ],
+    "dc:publisher": {
+        "schema:name": "ÚZIS ČR",
+        "schema:url": {
+            "@id": "https://www.uzis.cz/"
+        }
+    },
+    "dc:license": {
+        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+    },
+    "dc:modified": {
+        "@value": "2021-04-23",
+        "@type": "xsd:date"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "datum",
+                "titles": "datum",
+                "datatype": "date",
+                "dc:description": "Den, kdy byly spotřebovány ampulky dané očkovací látky"
+            },
+            {
+                "name": "ockovaci_misto_id",
+                "titles": "ockovaci_misto_id",
+                "datatype": "string",
+                "dc:description": "Jednoznačný identifikátor očkovacího místa."
+            },
+            {
+                "name": "ockovaci_misto_nazev",
+                "titles": "ockovaci_misto_nazev",
+                "datatype": "string",
+                "dc:description": "Název očkovacího místa"
+            },
+            {
+                "name": "kraj_nuts_kod",
+                "titles": "kraj_nuts_kod",
+                "datatype": "string",
+                "dc:description": "Identifikátor kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "kraj_nazev",
+                "titles": "kraj_nazev",
+                "datatype": "string",
+                "dc:description": "Název kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "ockovaci_latka",
+                "titles": "ockovaci_latka",
+                "datatype": "string",
+                "dc:description": "Název spotřebované očkovací látky."
+            },
+            {
+                "name": "vyrobce",
+                "titles": "vyrobce",
+                "datatype": "string",
+                "dc:description": "Název výrobce spotřebované očkovací látky."
+            },
+            {
+                "name": "pouzite_ampulky",
+                "titles": "pouzite_ampulky",
+                "datatype": "integer",
+                "dc:description": "Počet ampulek očkovací látky, které byly použity."
+            },
+            {
+                "name": "znehodnocene_ampulky",
+                "titles": "znehodnocene_ampulky",
+                "datatype": "integer",
+                "dc:description": "Počet ampulek očkovací látky, které byly znehodnoceny."
+            },
+            {
+                "name": "pouzite_davky",
+                "titles": "pouzite_davky",
+                "datatype": "integer",
+                "dc:description": "Počet použitých dávek očkovací látky (přepočet dávek v jedné ampulce podle informací výrobce): Comirnaty (Pfizer) = 6 dávek/ampulka, COVID-19 Vaccine AstraZeneca (AstraZeneca) = 10 dávek/ampulka, COVID-19 Vaccine Moderna (Moderna) = 10 dávek/ampulka."
+            },
+            {
+                "name": "znehodnocene_davky",
+                "titles": "znehodnocene_davky",
+                "datatype": "integer",
+                "dc:description": "Počet znehodnocených dávek očkovací látky (přepočet dávek v jedné ampulce podle informací výrobce): Comirnaty (Pfizer) = 6 dávek/ampulka, COVID-19 Vaccine AstraZeneca (AstraZeneca) = 10 dávek/ampulka, COVID-19 Vaccine Moderna (Moderna) = 10 dávek/ampulka."
+            }
+        ]
+    }
+}

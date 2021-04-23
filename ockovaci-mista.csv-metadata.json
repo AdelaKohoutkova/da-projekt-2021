@@ -1,0 +1,86 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "url": "ockovaci-mista.csv",
+    "dc:title": "COVID-19: Přehled vykázaných očkování podle očkovacích míst ČR",
+    "dc:description": "Datová sada poskytuje řádková data o vykázaných očkováních na jednotlivých očkovacích místech ČR. Každý řádek přehledu popisuje jedno vykázané očkování v daném dni a věkové skupině, s použitím vybrané očkovací látky, na konkrétním očkovacím místu a ve vybraném kraji.",
+    "dc:source": "Krajské hygienické stanice v ČR",
+    "dcat:keyword": [
+        "koronavirus",
+        "covid-19",
+        "očkování",
+        "očkovací místo",
+        "vakcinace",
+        "očkovací látka",
+        "věková skupina"
+    ],
+    "dc:publisher": {
+        "schema:name": "ÚZIS ČR",
+        "schema:url": {
+            "@id": "https://www.uzis.cz/"
+        }
+    },
+    "dc:license": {
+        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+    },
+    "dc:modified": {
+        "@value": "2021-04-23",
+        "@type": "xsd:date"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "datum",
+                "titles": "datum",
+                "datatype": "date",
+                "dc:description": "Datum, ve kterém byla očkování v daném kraji provedena."
+            },
+            {
+                "name": "vakcina",
+                "titles": "vakcina",
+                "datatype": "string",
+                "dc:description": "Název očkovací látky."
+            },
+            {
+                "name": "kraj_nuts_kod",
+                "titles": "kraj_nuts_kod",
+                "datatype": "string",
+                "dc:description": "Identifikátor kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "kraj_nazev",
+                "titles": "kraj_nazev",
+                "datatype": "string",
+                "dc:description": "Název kraje, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "zarizeni_kod",
+                "titles": "zarizeni_kod",
+                "datatype": "string",
+                "dc:description": "Kód zdravotnického zařízení, ve kterém se nachází očkovací místo (podle číselníku poskytovatelů zdravotních služeb na úrovni jednotlivých zařízení)."
+            },
+            {
+                "name": "zarizeni_nazev",
+                "titles": "zarizeni_nazev",
+                "datatype": "string",
+                "dc:description": "Název zdravotnického zařízení, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "poradi_davky",
+                "titles": "poradi_davky",
+                "datatype": "integer",
+                "dc:description": "Pořadí dávky (první, druhá) danou očkovací látkou."
+            },
+            {
+                "name": "vekova_skupina",
+                "titles": "vekova_skupina",
+                "datatype": "string",
+                "dc:description": "Rozdělení očkovaných osob podle věku do skupin: 0-17, 18-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65-69, 70-74, 75-79, 80+, nezařazeno - pokud nelze určit věkovou skupinu."
+            }
+        ]
+    }
+}
