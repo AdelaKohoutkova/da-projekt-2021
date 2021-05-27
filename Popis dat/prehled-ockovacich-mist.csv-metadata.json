@@ -1,14 +1,14 @@
 {
     "@context": [
-        "http://www.w3.org/ns/csvw",
+        "https://www.w3.org/ns/csvw",
         {
             "@language": "cs"
         }
     ],
     "url": "prehled-ockovacich-mist.csv",
     "dc:title": "COVID-19: Očkovací místa v ČR",
-    "dc:description": "Datová sada poskytuje seznam očkovaích míst v ČR, kde jsou podávány očkovací látky proti onemocnění COVID-19.",
-    "dc:source": "Krajské hygienické stanice v ČR",
+    "dc:description": "Datová sada poskytuje seznam veřejných očkovacích míst v ČR, kde jsou podávány očkovací látky proti onemocnění COVID-19.",
+    "dc:source": "COVID Forms Application - https://cfa.uzis.cz/, kontakt: crtit@army.cz",
     "dcat:keyword": [
         "koronavirus",
         "covid-19",
@@ -22,10 +22,10 @@
         }
     },
     "dc:license": {
-        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+        "@id": "http://data.gov.cz/podmínky-užití/volný-přístup/"
     },
     "dc:modified": {
-        "@value": "2021-04-23",
+        "@value": "2021-05-27",
         "@type": "xsd:date"
     },
     "tableSchema": {
@@ -52,7 +52,7 @@
                 "name": "operacni_status",
                 "titles": "operacni_status",
                 "datatype": "boolean",
-                "dc:description": "Příznak, zda je očkovací místo v provozu na webu https://registrace.mzcr.cz/."
+                "dc:description": "Příznak, zda je očkovací místo veřejné. V datové sadě jsou uveřejněna pouze veřejná očkovací místa."
             },
             {
                 "name": "ockovaci_misto_adresa",

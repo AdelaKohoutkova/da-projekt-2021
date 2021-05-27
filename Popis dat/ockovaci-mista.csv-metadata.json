@@ -1,6 +1,6 @@
 {
     "@context": [
-        "http://www.w3.org/ns/csvw",
+        "https://www.w3.org/ns/csvw",
         {
             "@language": "cs"
         }
@@ -8,7 +8,7 @@
     "url": "ockovaci-mista.csv",
     "dc:title": "COVID-19: Přehled vykázaných očkování podle očkovacích míst ČR",
     "dc:description": "Datová sada poskytuje řádková data o vykázaných očkováních na jednotlivých očkovacích místech ČR. Každý řádek přehledu popisuje jedno vykázané očkování v daném dni a věkové skupině, s použitím vybrané očkovací látky, na konkrétním očkovacím místu a ve vybraném kraji.",
-    "dc:source": "Krajské hygienické stanice v ČR",
+    "dc:source": "Informační systém infekčních nemocí (ISIN) - https://www.uzis.cz/index.php?pg=registry-sber-dat--ochrana-verejneho-zdravi--informacni-system-infekcni-nemoci, kontakt: helpdesk.registry@uzis.cz",
     "dcat:keyword": [
         "koronavirus",
         "covid-19",
@@ -25,10 +25,10 @@
         }
     },
     "dc:license": {
-        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+        "@id": "http://data.gov.cz/podmínky-užití/volný-přístup/"
     },
     "dc:modified": {
-        "@value": "2021-04-23",
+        "@value": "2021-05-27",
         "@type": "xsd:date"
     },
     "tableSchema": {

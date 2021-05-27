@@ -1,6 +1,6 @@
 {
     "@context": [
-        "http://www.w3.org/ns/csvw",
+        "https://www.w3.org/ns/csvw",
         {
             "@language": "cs"
         }
@@ -8,7 +8,7 @@
     "url": "ockovani-spotreba.csv",
     "dc:title": "COVID-19: Přehled spotřeby podle očkovacích míst ČR",
     "dc:description": "Datová sada obsahuje přehled spotřeby očkovacích látek (použité a znehodnocené ampulky) proti onemocnění COVID-19 v očkovacích místech v ČR. Každý záznam (řádek) datové sady udává počet použitých a znehodnocených ampulek dané očkovací látky na daném očkovacím místě v daný den.",
-    "dc:source": "Krajské hygienické stanice v ČR",
+    "dc:source": "COVID Forms Application - https://cfa.uzis.cz/, kontakt: crtit@army.cz",
     "dcat:keyword": [
         "koronavirus",
         "covid-19",
@@ -25,10 +25,10 @@
         }
     },
     "dc:license": {
-        "@id": "https://data.gov.cz/podmínky-užití/volný-přístup/"
+        "@id": "http://data.gov.cz/podmínky-užití/volný-přístup/"
     },
     "dc:modified": {
-        "@value": "2021-04-23",
+        "@value": "2021-05-27",
         "@type": "xsd:date"
     },
     "tableSchema": {

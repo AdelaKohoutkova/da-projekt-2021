@@ -42,7 +42,7 @@
 
 **Zdroj:**
 * Český statistický úřad
-* url ke stažení: !DOPLNIT!
+* url ke stažení: https://www.czso.cz/csu/czso/csu_a_uzemne_analyticke_podklady
 
 **Popis dat:**
 * Použity excelovské tabulky k 31.12.2019 - věkové složení obyvatel.
@@ -80,25 +80,6 @@
 * https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19
 * verze API: v2 
 
-### COVID-19: Přehled vykázaných očkování podle krajů ČR
-
-**Zdroj:**
-* MZČR
-* url ke stažení: https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani.csv
-
-**Popis dat:**
-* dostupné v souboru **ockovani.csv-metadata.json**
-* Datová sada poskytuje řádková data o vykázaných očkováních na jednotlivých očkovacích místech ČR. Každý řádek přehledu popisuje jedno vykázané očkování v daném dni a věkové skupině, s použitím vybrané očkovací látky, na konkrétním očkovacím místu a ve vybraném kraji.
-* Zdrojem jsou Krajské hygienické stanice v ČR
-* denní aktualizace
-
-**Uložení dat:**
-* Google Disk - k dispozici soubor stažený ke 14.4.2021 -> 2-ockovani.csv
-
-**Název vstupní tabulky v Keboola:**
-* http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_ockovani_kraje
-
-
 ### COVID-19: Přehled vykázaných očkování podle očkovacích míst ČR
 
 **Zdroj:**
@@ -118,7 +99,7 @@
 * http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_ockovani_ockovaci_mista
 
 
-### COVID-19: Přehled vykázaných očkování podle očkovacích míst ČR
+### COVID-19: Přehled očkovacích míst ČR
 
 **Zdroj:**
 * MZČR
@@ -154,81 +135,3 @@
 
 **Název vstupní tabulky v Keboola:**
 * http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_spotreba_ockovaci_mista
-
-
-### COVID-19: Přehled distribuce očkovacích látek v ČR
-
-**Zdroj:**
-* MZČR
-* url ke stažení: https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-distribuce.csv
-
-**Popis dat:**
-* dostupné v souboru **ockovani-distribuce.csv-metadata.json**
-* Datová sada obsahuje přehled distribuce očkovacích látek proti onemocnění COVID-19 do očkovacích míst v ČR. Každý záznam (řádek) datové sady udává počet ampulek dané očkovací látky, která byla daným očkovacím místem v daný den přijata nebo vydána.
-* Zdrojem jsou Krajské hygienické stanice v ČR
-* denní aktualizace
-
-**Uložení dat:**
-* Google Disk - k dispozici soubor stažený ke 14.4.2021 -> 5-ockovani-distribuce.csv
-
-**Název vstupní tabulky v Keboola:**
-* http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_distribuce_ockovaci_mista
-
-
-### COVID-19: Přehled registrací podle očkovacích míst ČR
-
-**Zdroj:**
-* MZČR
-* url ke stažení: https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-registrace.csv
-
-**Popis dat:**
-* dostupné v souboru **ockovani-registrace.csv-metadata.json**
-* Datová sada poskytuje přehled vytvořených registrací v centrálním rezervačním systému na očkování proti onemocnění COVID-19 (https://registrace.mzcr.cz/). Záznamy (řádky) datové sady popisují jednotlivé anonymizované registrace, které byly vytvořeny na dané očkovací místo v daný den.
-* Zdrojem jsou Krajské hygienické stanice v ČR
-* denní aktualizace
-
-**Uložení dat:**
-* Google Disk - k dispozici soubor stažený ke 14.4.2021 -> 6-ockovani-registrace.csv
-
-**Název vstupní tabulky v Keboola:**
-* http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_registrace_ockovaci_mista
-
-
-### COVID-19: Přehled rezervací podle očkovacích míst ČR
-
-**Zdroj:**
-* MZČR
-* url ke stažení: https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-rezervace.csv
-
-**Popis dat:**
-* dostupné v souboru **ockovani-rezervace.csv-metadata.json**
-* Datová sada poskytuje přehled volné a maximální kapacity očkovacích míst v jednotlivých dnech podle informací z centrálního rezervačního systému na očkování proti onemocnění COVID-19 (https://reservatic.com/ockovani). Každý záznam (řádek) datové sady udává volnou a maximální kapacitu daného očkovacího místa v daný den.
-* Zdrojem jsou Krajské hygienické stanice v ČR
-* denní aktualizace
-
-**Uložení dat:**
-* Google Disk - k dispozici soubor stažený ke 14.4.2021 -> 7-ockovani-rezervace.csv
-
-**Název vstupní tabulky v Keboola:**
-* http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_rezervace_ockovaci_mista
-
-
-### COVID-19: COVID-19: Přehled vykázaných očkování podle profesí
-
-**Zdroj:**
-* MZČR
-* url ke stažení: https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-profese.csv
-
-**Popis dat:**
-* dostupné v souboru **ockovani-rezervace.csv-metadata.json**
-* Datová sada poskytuje řádková data o vykázaných očkováních na jednotlivých očkovacích místech ČR. Každý řádek přehledu popisuje jedno vykázané očkování v daném dni a indikační skupině profese, s použitím dané dávky očkovací látky, na konkrétním očkovacím místu a ve vybraném kraji.
-* Zdrojem jsou Krajské hygienické stanice v ČR
-* denní aktualizace
-
-**Uložení dat:**
-* Google Disk - k dispozici soubor stažený ke 14.4.2021 -> 8-ockovani-profese.csv
-
-**Název vstupní tabulky v Keboola:**
-* http extraktor "COVID data - MZd", bucket "http_extractor_covid_mzd" -> název tabulky: in_ockovani_profese
-
-

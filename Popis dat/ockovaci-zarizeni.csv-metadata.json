@@ -1,0 +1,95 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/csvw",
+        {
+            "@language": "cs"
+        }
+    ],
+    "url": "ockovaci-zarizeni.csv",
+    "dc:title": "COVID-19: Očkovací zařízení",
+    "dc:description": "Datová sada poskytuje seznam očkovacích zařízení v ČR jako doplnění seznamu očkovacích míst, kde jsou podávány očkovací látky proti onemocnění COVID-19. Jedná se především o praktické lékaře, ale i další, kde se očkování provádí.",
+    "dc:source": "Informační systém infekčních nemocí (ISIN) - https://www.uzis.cz/index.php?pg=registry-sber-dat--ochrana-verejneho-zdravi--informacni-system-infekcni-nemoci, kontakt: helpdesk.registry@uzis.cz",
+    "dcat:keyword": [
+        "koronavirus",
+        "covid-19",
+        "očkování",
+        "očkovací zařízení"
+    ],
+    "dc:publisher": {
+        "schema:name": "ÚZIS ČR",
+        "schema:url": {
+            "@id": "https://www.uzis.cz/"
+        }
+    },
+    "dc:license": {
+        "@id": "http://data.gov.cz/podmínky-užití/volný-přístup/"
+    },
+    "dc:modified": {
+        "@value": "2021-05-27",
+        "@type": "xsd:date"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "zarizeni_kod",
+                "titles": "zarizeni_kod",
+                "datatype": "string",
+                "dc:description": "Kód zdravotnického zařízení, ve kterém je prováděno očkování (podle číselníku poskytovatelů zdravotních služeb na úrovni jednotlivých zařízení)."
+            },
+            {
+                "name": "zarizeni_nazev",
+                "titles": "zarizeni_nazev",
+                "datatype": "string",
+                "dc:description": "Název zdravotnického zařízení, ve kterém je prováděno očkování."
+            },
+            {
+                "name": "provoz_zahajen",
+                "titles": "provoz_zahajen",
+                "datatype": "boolean",
+                "dc:description": "Příznak, zda bylo zahájeno očkování v daném zdravotnickém zařízení."
+            },
+            {
+                "name": "kraj_nuts_kod",
+                "titles": "kraj_nuts_kod",
+                "datatype": "string",
+                "dc:description": "Identifikátor kraje podle klasifikace NUTS 3, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "kraj_nazev",
+                "titles": "kraj_nazev",
+                "datatype": "string",
+                "dc:description": "Název kraje, ve kterém se nachází očkovací místo."
+            },
+            {
+                "name": "okres_lau_kod",
+                "titles": "okres_lau_kod",
+                "datatype": "string",
+                "dc:description": "Identifikátor okresu podle klasifikace LAU 1, ve kterém se očkovací zařízení nachází."
+            },
+            {
+                "name": "okres_nazev",
+                "titles": "okres_nazev",
+                "datatype": "string",
+                "dc:description": "Název okresu, ve kterém se očkovací zařízení nachází."
+            },
+            {
+                "name": "zrizovatel_kod",
+                "titles": "zrizovatel_kod",
+                "datatype": "string",
+                "dc:description": "Kód zřizovatele zdravotnického zařízení podle číselníku ÚZIS."
+            },
+            {
+                "name": "zrizovatel_nazev",
+                "titles": "zrizovatel_nazev",
+                "datatype": "string",
+                "dc:description": "Název zřizovatele zdravotnického zařízení."
+            },
+            {
+                "name": "provoz_ukoncen",
+                "titles": "provoz_ukoncen",
+                "datatype": "date",
+                "dc:description": "Datum, kdy bylo ukončeno očkování v daném zdravotnickém zařízení."
+            }
+        ]
+    }
+}
