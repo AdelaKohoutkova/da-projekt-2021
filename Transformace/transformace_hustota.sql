@@ -1,5 +1,5 @@
 // transformace z tabulky "in_zaklad_vypocet_hustota" na dve dilci tabulky pro okresy a kraje: "hustota_okres", "hustota_kraj"
-zakladni tabulka obsahuje obsahuje udaje o poctu obyvatel a rozloze v ha pro jednotlive obce
+zakladni tabulka obsahuje udaje o poctu obyvatel a rozloze v ha pro jednotlive obce
 transformaci docilime prevodu ha na km2 a vypocitani hustoty obyvatel na urovni okresu a kraju 
 
 
@@ -8,15 +8,17 @@ SELECT *
 FROM "in_zaklad_vypocet_hustota";
 
 CREATE OR REPLACE TABLE "hustota_okres" AS
-SELECT "okres_nuts_kod"
+SELECT "kraj_nuts_kod"
+       , "okres_nuts_kod"
        , round("vymera_ha"/100) AS "vymera_km2"
        , round("pocet_obyvatel"/"vymera_km2") AS "hustota_obyvatel"
 FROM (
-        SELECT "okres_nuts_kod"
+        SELECT "kraj_nuts_kod"
+                ,"okres_nuts_kod"
                 , SUM("pocet_obyvatel") AS "pocet_obyvatel"
                 , SUM("vymera_ha") AS "vymera_ha"
         FROM "zaklad_vypocet_hustota_temp"
-        GROUP BY "okres_nuts_kod"
+        GROUP BY "kraj_nuts_kod","okres_nuts_kod"
 );
 
 CREATE OR REPLACE TABLE "hustota_kraj" AS

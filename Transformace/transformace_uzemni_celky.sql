@@ -18,3 +18,13 @@ SELECT DISTINCT "okres_kod" AS "okres_nuts_kod"
 FROM "in_struktura_uzemi_cr"
 ORDER BY "okres_nuts_kod"
 ;
+
+-- celkem 77 řádek k 1.1.2021
+CREATE OR REPLACE TABLE "kraje_okresy" AS 
+SELECT DISTINCT "okres_kod" AS "okres_nuts_kod"
+                , "okres_nazev" AS "okres_nuts_nazev"
+                , "kraj_kod" AS "kraj_nuts_kod"
+                , "kraj_nazev" AS "kraj_nuts_nazev"
+FROM "in_struktura_uzemi_cr"
+ORDER BY "okres_nuts_kod"
+;
