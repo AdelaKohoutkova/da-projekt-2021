@@ -1,5 +1,6 @@
 -- transformace vytváří tabulky pro použití v Tableau - zejména demografické údaje
   -- jedná se o statické údaje - tj. jednorázová transformace
+  
 CREATE OR REPLACE TABLE "out_populace" AS
 SELECT "populace_okres"."vekova_skupina"
         , "populace_okres"."kraj_nuts_kod"
