@@ -1,0 +1,26 @@
+-- agregace a přetypování vstupní tabulky s očkováním
+CREATE OR REPLACE TABLE "ockovani_zarizeni" AS 
+SELECT "datum"
+        , "kraj_nuts_kod"
+        , "zarizeni_kod"
+        , "vakcina"
+        , "poradi_davky"
+        , "vekova_skupina"
+        , COUNT("id_pacient") AS "pocet_ockovanych"
+FROM    (SELECT ROW_NUMBER() OVER (ORDER BY "datum") AS "id_pacient"
+            , "vakcina"
+            , "vekova_skupina"
+            , "kraj_nuts_kod"
+            , "zarizeni_nazev"
+            , TO_DATE("datum", 'YYYY-MM-DD') AS "datum"
+            , TO_NUMBER("poradi_davky") AS "poradi_davky"
+            , "kraj_nazev"
+            , "zarizeni_kod"
+        FROM "in_ockovani_ockovaci_mista"
+        )
+GROUP BY "datum"
+        , "kraj_nuts_kod"
+        , "zarizeni_kod"
+        , "vakcina"
+        , "poradi_davky"
+        , "vekova_skupina";

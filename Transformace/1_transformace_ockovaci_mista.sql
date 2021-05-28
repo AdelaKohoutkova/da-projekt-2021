@@ -1,3 +1,6 @@
+-- Transformace vytváří vyčištěnou tabulku se seznamem očkovacích míst - nastaven inkrementální load
+  -- Jsou odstraněna místa bez kódu zařízení (nemají záznam v tabulkách s očkováním a spotřebou)
+  -- Je doplněno latitude a logitude ručně pro vybraná očkovací místa
 CREATE OR REPLACE TABLE "ockovaci_mista" AS
 SELECT "ockovaci_misto_id"
       , "ockovaci_misto_nazev"
