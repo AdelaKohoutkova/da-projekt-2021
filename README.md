@@ -8,9 +8,9 @@ Datový projekt si klade za cíl analyzovat očkování v ČR v rozpadu na jedno
 Projekt byl zpracováván v nástroji [Keboola](https://www.keboola.com/), kde se nachází také kompletní technická infrastruktura a probíhají veškeré transformace, vyjma Python transformací použitých separátně pro přípravu statických dat do formy vhodné k nahrání do Kebooly pomocí extraktoru. Data jsou denně aktualizována přibližně v 10:30 ráno.
 
 Výstupem je interaktivní dashboard zpracovaný v Tableau desktop, který může posloužit pro krajské koordinátory ale i běžnému občanovi ČR k získání přehledu o postupu očkování na úrovni okresů.
-Vizualizace je k dispozici na [Tableau Public](!!!DOPLNIT HYPERTEXTOVÝ ODKAZ!!!) Bohužel ve veřejné vizualizaci prozatím nedochází k pravidelné aktualizaci.
+Vizualizace je k dispozici na [Tableau Public](https://public.tableau.com/app/profile/radka.stekla/viz/AnalzaokovnvokresechR/Dashboardmapakraje) Bohužel ve veřejné vizualizaci prozatím nedochází k pravidelné aktualizaci.
 
-Popis zpracování dat a informace o datovém projektu jsou k dispozici také v článku na blogu [zde](!!!DOPLNIT HYPERTEXTOVÝ ODKAZ!!!).
+Popis zpracování dat a informace o datovém projektu jsou k dispozici také v článku na blogu [zde](http://bit.ly/dadpj2021projekt13).
 ### Podrobnější popis projektu a struktura repository
 
 
